@@ -8,7 +8,7 @@ after_script:
 - git checkout master #should be latest release
 - git checkout -b migration_test_branch_latest_release
 - git rm -r migrations
-- git checkout latest_release -- migrations
+- git checkout latest_release -- migrations -f
 # - git checkout ${CURR_BRANCH} -- migrations
 - npm install
 - npm test
