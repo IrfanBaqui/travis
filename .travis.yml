@@ -1,4 +1,5 @@
 language: node_js
 node_js:
   - "0.10"
-script: travis_setup.sh
+before_install:
+  - git clone -b test_branch --single-branch git@github.com:IrfanBaqui/travis.git
