@@ -2,13 +2,14 @@ language: node_js
 node_js:
 - '0.10'
 after_script:
-- CURR_BRANCH=git rev-parse --abbrev-ref HEAD
+# - CURR_BRANCH=git rev-parse --abbrev-ref HEAD
 - git clone https://github.com/IrfanBaqui/travis
 - cd travis
-- git checkout latest_release
+- git checkout master #should be latest release
 - git checkout -b migration_test_branch_latest_release
 - git rm -r migrations
-- git checkout ${CURR_BRANCH} -- migrations
+- git checkout latest_release -- migrations
+# - git checkout ${CURR_BRANCH} -- migrations
 - npm install
 - npm test
 # - git clone -b test_branch --single-branch https://github.com/IrfanBaqui/travis
