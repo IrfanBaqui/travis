@@ -9,7 +9,7 @@ after_script:
 - git checkout -b migration_test_branch_latest_release
 - git rm -r migrations
 - git branch -a
-- git checkout latest_release -- migrations -f
+- git checkout remotes/origin/latest_release -- migrations
 # - git checkout ${CURR_BRANCH} -- migrations
 - npm install
 - npm test
