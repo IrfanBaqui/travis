@@ -1,9 +1,13 @@
 #!/bin/bash
 
-mkdir testdir;
-git add .;
-git commit -m "made dir";
-git push origin master;
+# mkdir testdir;
+# git add .;
+# git commit -m "made dir";
+# git push origin master;
+
+echo "Hello there!";
+
+
 
 # if [[ $TRAVIS_BRANCH == '1.0.-stable' ]]
 #   cd test/dummy
