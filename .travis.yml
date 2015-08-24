@@ -10,6 +10,7 @@ after_script:
 - git rm -r migrations
 - git branch -a
 - git checkout remotes/origin/latest_release -- migrations
+- git --no-pager diff --name-only FETCH_HEAD $(git merge-base FETCH_HEAD master)
 # - git checkout ${CURR_BRANCH} -- migrations
 - npm install
 - npm test
