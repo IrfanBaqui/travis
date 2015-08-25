@@ -5,11 +5,11 @@ after_script:
 # - CURR_BRANCH=git rev-parse --abbrev-ref HEAD
 - git clone https://github.com/IrfanBaqui/travis
 - cd travis
-- $"TRAVIS_BRANCH"
-- $"TRAVIS_BUILD_DIR"
-- $"TRAVIS_COMMIT"
-- $"TRAVIS_PULL_REQUEST"
-- $"TRAVIS_REPO_SLUG"
+- $TRAVIS_BRANCH
+- $TRAVIS_BUILD_DIR
+- $TRAVIS_COMMIT
+- $TRAVIS_PULL_REQUEST
+- $TRAVIS_REPO_SLUG
 - git checkout master #should be latest release
 - git checkout -b migration_test_branch_latest_release
 - git rm -r migrations
