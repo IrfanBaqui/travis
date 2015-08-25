@@ -3,7 +3,7 @@ node_js:
 - '0.10'
 after_script:
 # - CURR_BRANCH=git rev-parse --abbrev-ref HEAD
-- $CURR_BRANCH=git rev-parse HEAD #SHA of current branch (not deploy branch)
+- $CURR_BRANCH=$(git rev-parse HEAD) #SHA of current branch (not deploy branch)
 - git show --name-only CURR_BRANCH
 - git clone https://github.com/IrfanBaqui/travis
 - pwd
