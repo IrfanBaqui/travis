@@ -5,8 +5,7 @@ after_script:
 # - CURR_BRANCH=git rev-parse --abbrev-ref HEAD
 - $CURR_BRANCH=$(git rev-parse HEAD) #SHA of current branch (not deploy branch)
 - git rev-parse develop
-- git branch -a
-- git diff --name-only $(git rev-parse develop) $TRAVIS_COMMIT
+- git diff --name-only
 # - git show --pretty --name-only $CURR_BRANCH
 - git clone https://github.com/IrfanBaqui/travis
 - pwd
