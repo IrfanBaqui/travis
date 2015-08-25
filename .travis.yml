@@ -4,9 +4,9 @@ node_js:
 after_script:
 # - CURR_BRANCH=git rev-parse --abbrev-ref HEAD
 - git clone https://github.com/IrfanBaqui/travis
-- ls
+- pwd
 - cd travis
-- ls
+- pwd
 - echo $TRAVIS_BRANCH
 - echo $TRAVIS_BUILD_DIR
 - echo $TRAVIS_COMMIT
